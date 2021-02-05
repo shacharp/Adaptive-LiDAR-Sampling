@@ -148,14 +148,15 @@ Note:
 
 
 ## Runtime
+It may be different to your machine, due to different CPUs.
 Our complete algorithm:
-- A run with default parameters takes ~19.5h on 2 GeForce RTX 2080 Ti. A similar run with 4 GPUs and pred-bs=8 saves ~33% of the time.
+- A run with default parameters takes ~18.6h on 2 GeForce RTX 2080 Ti. A similar run with 4 GPUs and pred-bs=8 saves ~33% of the time.
 - A run with default parameters, beside pred-bs=16, takes ~16.5h on 2 Tesla V100-DGx-S-32GB. A similar run with 4 GPUs and pred-bs=32 saves ~33% of the time.
 - A run with default parameters, beside train-bs=28 and pred-bs=32, takes ~9.5h on 4 Tesla V100-DGx-S-32GB.
 
 Generating samples & depth predictions on 'test':
-- Takes ~24 minutes for 797 images with default parameters on 2 GeForce RTX 2080 Ti.
-- Takes ~21 minutes for 797 images with default parameters and pred-bs=16 on 2 Tesla V100-DGx-S-32GB. A similar run with 4 GPUs and pred-bs=32 takes 19 min.
+- Takes ~22 minutes for 797 images with default parameters on 2 GeForce RTX 2080 Ti.
+- Takes ~20 minutes for 797 images with default parameters and pred-bs=16 on 2 Tesla V100-DGx-S-32GB. A similar run with 4 GPUs and pred-bs=32 takes ~19 min.
 
 
 ## Citation
