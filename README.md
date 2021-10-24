@@ -162,11 +162,12 @@ Generating samples & depth predictions on 'test':
 ## Citation
 If you find our work useful, please cite our paper:
 ```bash
-@article{gofer2020adaptive,
+@article{gofer2021adaptive,
   title={Adaptive LiDAR Sampling and Depth Completion using Ensemble Variance},
   author={Gofer, Eyal and Praisler, Shachar and Gilboa, Guy},
-  journal={arXiv preprint arXiv:2007.13834},
-  year={2020}
+  journal={IEEE Transactions on Image Processing},
+  year={2021},
+  publisher={IEEE}
 }
 ```
 
