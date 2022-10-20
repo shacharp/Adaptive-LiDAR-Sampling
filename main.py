@@ -58,7 +58,7 @@ def predict(curr_args, loader, curr_model):
         pred = curr_model(batch_data)
         pred_out_dir = curr_args.pred_dir
 
-        if pred_out_dir is not '':
+        if pred_out_dir != '':
             pred1 = pred.cpu().detach().numpy()[:, 0, :, :]
             for im_idx, pred_im in enumerate(pred1):
                 data_folder1 = os.path.abspath(curr_args.data_folder)
