@@ -256,7 +256,7 @@ Given a kitti dir, and a type ('train'/'val'), return a list of drives and a map
 """
 def get_train_val_drive_list(src_path, dir_type):
     assert (dir_type in train_and_val())
-    dirname = src_path + get_train_val_type_dirs()[0] + '/' + dir_type  # takes data_depth_annotated
+    dirname = src_path + '/' + get_train_val_type_dirs()[0] + '/' + dir_type  # takes data_depth_annotated
     drives = os.listdir(dirname)
     img_count = {}
     for drive in drives:
