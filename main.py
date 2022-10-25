@@ -127,7 +127,7 @@ if __name__ == '__main__':
     for m in range(1, M+1):
         create_dir_tree_skeleton('../data_new/phase_1/mini_set_' + str(m), '../data')
 
-    (sets, sizes, _) = divide_drives_to_mini_sets(M, arguments.miniset_size, '../data/', 'train', arguments.big_portion == "True")
+    (sets, sizes, _) = divide_drives_to_mini_sets(M, arguments.miniset_size, '../data', 'train', arguments.big_portion == "True")
     assert len(sets) >= M, "There are not enough train drives to make M mini-sets"
     print("Total train size is: {}".format(sizes.sum()))  # based on data_depth_annotated folder (we'll have a little bit more images in rgb_data but we aren't using them)
 
@@ -151,7 +151,7 @@ if __name__ == '__main__':
     print("Preparing sets finished, time elapsed {:.2f} minutes \n".format((time.time() - divide_time) / 60))
 
     if first_phase_rgbd == True:
-        print("Preparing black (empty) depth maps tor first phase input")
+        print("Preparing black (empty) depth maps for first phase input")
         for m in range(1, M + 1):
             apply_empty_d_maps_to_data('../data_new/phase_1/mini_set_' + str(m) + '/')  # overwrite the velodyne_raw with black images
 
